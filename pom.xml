@@ -12,7 +12,7 @@
 	<groupId>com.actionbarsherlock</groupId>
 	<artifactId>parent</artifactId>
 	<packaging>pom</packaging>
-	<version>4.2.0</version>
+	<version>4.2.1-SNAPSHOT</version>
 
 	<name>ActionBarSherlock (Parent)</name>
 	<description>Android library for implementing the action bar design pattern using the backported sources of Ice Cream Sandwich.</description>
@@ -60,6 +60,21 @@
 		<system>GitHub Issues</system>
 		<url>https://github.com/JakeWharton/ActionBarSherlock/issues</url>
 	</issueManagement>
+
+    <distributionManagement>
+        <repository>
+            <id>nexus-releases</id>
+            <url>http://108.171.174.175:8081/nexus/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <url>http://108.171.174.175:8081/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <site>
+            <id>nexus-site</id>
+            <url>dav:http://108.171.174.175:8081/nexus/content/sites/site-internal/${project.groupId}/${project.artifactId}/${project.version}</url>
+        </site>
+    </distributionManagement>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
